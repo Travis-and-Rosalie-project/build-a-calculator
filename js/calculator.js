@@ -7,6 +7,7 @@ console.log("hey");
     var operators = document.getElementsByClassName("operators");
     var keys = document.getElementsByClassName("keys");
     var middle = document.getElementById("middle")
+    var rightSide = document.getElementById("right-operand");
 
 
 
@@ -14,8 +15,10 @@ console.log("hey");
     for(var i = 0; i < keys.length; i++){
         keys[i].addEventListener("click", function(){
 
-            if (leftSide === "") {
+            if (rightSide.innerHTML === "" && middle.innerHTML === "") {
                 leftSide.innerHTML += this.innerHTML;
+            } else {
+                rightSide.innerHTML += this.innerHTML;
             }
             console.log(this.innerHTML);
         })
@@ -27,3 +30,4 @@ console.log("hey");
             console.log(this);
         })
     }
+
