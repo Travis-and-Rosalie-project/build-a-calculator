@@ -8,6 +8,7 @@ console.log("hey");
     var keys = document.getElementsByClassName("keys");
     var middle = document.getElementById("middle")
     var rightSide = document.getElementById("right-operand");
+    var clear = document.getElementById("clear");
 
 
 
@@ -30,4 +31,14 @@ console.log("hey");
             console.log(this);
         })
     }
+        //     while(rightSide === "" && leftSide === ""){
+        // clear.addEventListener("click", function(){
+        //         rightSide.innerHTML = "0"
+        //     })
+        //
+        // }
+
+
+
+
 
