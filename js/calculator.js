@@ -20,12 +20,13 @@ console.log("hey");
             } else {
                 rightSide.innerHTML += this.innerHTML;
             }
-            console.log(this.innerHTML);
+            // console.log(this.innerHTML);
         })
     }
 
     for(var i = 0; i < operators.length; i++) {
         operators[i].addEventListener("click", function(){
+
             middle.innerHTML = this.innerHTML;
             console.log(this);
         })
