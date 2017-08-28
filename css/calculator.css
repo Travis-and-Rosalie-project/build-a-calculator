@@ -1,7 +1,7 @@
-#total {
-    height: 75px;
-    background-color: whitesmoke;
-}
+/*#total {*/
+    /*height: 75px;*/
+    /*background-color: whitesmoke;*/
+/*}*/
 
 #calculator {
     width: 300px;
@@ -21,6 +21,13 @@
     text-align: center;
     font-family: sans-serif Helvetica;
     font-size: 2em;
+}
+
+.operand-boxes {
+    height: 75px;
+    width: 80px;
+    background-color: whitesmoke;
+    margin: 3px;
 }
 
 .buttons button {
