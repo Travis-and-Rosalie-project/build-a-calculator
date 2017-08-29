@@ -37,17 +37,21 @@ console.log("hey");
     });
 
     equal.addEventListener("click", function (){
+        var leftValue = parseFloat(leftSide.innerHTML);
+        var rightValue = parseFloat(rightSide.innerHTML);
+
+
         if (middle.innerHTML === "/") {
-            leftSide.innerHTML = leftSide.innerHTML / rightSide.innerHTML;
+            leftSide.innerHTML = leftValue / rightValue;
 
         } else if (middle.innerHTML === "*") {
-            leftSide.innerHTML = leftSide.innerHTML * rightSide.innerHTML;
+            leftSide.innerHTML = leftValue * rightValue;
 
         } else if (middle.innerHTML === "+") {
-            leftSide.innerHTML = parseInt(leftSide.innerHTML) + parseInt(rightSide.innerHTML);
+            leftSide.innerHTML = leftValue + rightValue;
 
         } else if (middle.innerHTML === "-") {
-            leftSide.innerHTML = leftSide.innerHTML - rightSide.innerHTML;
+            leftSide.innerHTML = leftValue - rightValue;
 
         } else {
             leftSide.innerHTML = "";
@@ -60,9 +64,11 @@ console.log("hey");
 
 
     decimal.addEventListener("click", function (){
-            leftSide.innerHTML += leftSide.innerHTML + ".";
-            console.log(leftSide);
-            rightSide.innerHTML += rightSide.innerHTML + ".";
+        if (middle.innerHTML === "") {
+            leftSide.innerHTML = leftSide.innerHTML + ".";
+        } else {
+            rightSide.innerHTML = rightSide.innerHTML + ".";
+        }
 
-    })
+    });
 

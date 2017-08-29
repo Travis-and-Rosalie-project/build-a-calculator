@@ -1,18 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body {
+    background-image: url("https://t3.ftcdn.net/jpg/00/94/35/38/240_F_94353894_LSOw5KZSy70VkX9M5d7XrdsQ1Ul2XpEj.jpg");
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
 #calculator {
     width: 300px;
     height: 350px;
-    background: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+    background-color: transparent;
     padding-left: 30px;
     padding-top: 30px;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 15px;
+    /*margin-top: 200px;*/
+    /*margin-left: 300px;*/
 
 }
 
 #first-row button{
     width: 272px;
     height: 50px;
-    background-color: lightskyblue;
+    background-color: greenyellow;
     display: block;
     /*margin: 5px;*/
     /*padding: 2px;*/
@@ -23,32 +36,34 @@
 }
 
 .keys, #decimal, .equals {
-    background: linear-gradient(to bottom, lightgray, darkgray);
+    background: radial-gradient(lightgrey, grey);
+
 }
 
 .operators {
-    background-color: cyan;
+    background-color: black;
 }
 
 .operand-boxes {
     height: 50px;
     width: 90.5px;
-    background-color: whitesmoke;
-    /*margin: 1px;*/
+    background-color: black;
     font-size: 2em;
+    color: lawngreen;
+    padding-top: 5px;
     text-align: center;
+    font-family: "Orbitron", sans-serif;
 }
 
 .buttons button {
     width: 68px;
     height: 55px;
-    /*margin: 5px;*/
-    /*padding: 2px;*/
     display: block;
     text-align: center;
     font-family: sans-serif Helvetica;
     font-size: 2em;
-    border-style: solid;
+    border-style: none;
+    color: white;
 
 }
 
