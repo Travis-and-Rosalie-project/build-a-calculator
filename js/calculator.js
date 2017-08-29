@@ -8,6 +8,7 @@ console.log("hey");
     var rightSide = document.getElementById("right-operand");
     var clear = document.getElementById("clear");
     var equal = document.getElementById("equal");
+    var decimal = document.getElementById('decimal');
 
     for(var i = 0; i < keys.length; i++){
         keys[i].addEventListener("click", function(){
@@ -55,3 +56,13 @@ console.log("hey");
         middle.innerHTML = "";
         rightSide.innerHTML = "";
     });
+
+
+
+    decimal.addEventListener("click", function (){
+            leftSide.innerHTML += leftSide.innerHTML + ".";
+            console.log(leftSide);
+            rightSide.innerHTML += rightSide.innerHTML + ".";
+
+    })
+
