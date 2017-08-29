@@ -1,5 +1,4 @@
 "use strict";
-console.log("hey");
 
     var leftSide = document.getElementById("left-operand");
     var operators = document.getElementsByClassName("operators");
@@ -24,7 +23,6 @@ console.log("hey");
 
     for(var i = 0; i < operators.length; i++) {
         operators[i].addEventListener("click", function(){
-
             middle.innerHTML = this.innerHTML;
             console.log(this);
         })
