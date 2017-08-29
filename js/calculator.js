@@ -1,17 +1,13 @@
 "use strict";
 console.log("hey");
 
-
-
     var leftSide = document.getElementById("left-operand");
     var operators = document.getElementsByClassName("operators");
     var keys = document.getElementsByClassName("keys");
-    var middle = document.getElementById("middle")
+    var middle = document.getElementById("middle");
     var rightSide = document.getElementById("right-operand");
     var clear = document.getElementById("clear");
-
-
-
+    var equal = document.getElementById("equal");
 
     for(var i = 0; i < keys.length; i++){
         keys[i].addEventListener("click", function(){
@@ -21,24 +17,41 @@ console.log("hey");
             } else {
                 rightSide.innerHTML += this.innerHTML;
             }
-            console.log(this.innerHTML);
+            // console.log(this.innerHTML);
         })
     }
 
     for(var i = 0; i < operators.length; i++) {
         operators[i].addEventListener("click", function(){
+
             middle.innerHTML = this.innerHTML;
             console.log(this);
         })
     }
-        //     while(rightSide === "" && leftSide === ""){
-        // clear.addEventListener("click", function(){
-        //         rightSide.innerHTML = "0"
-        //     })
-        //
-        // }
 
+    clear.addEventListener("click", function(){
+        leftSide.innerHTML = "";
+        rightSide.innerHTML = "";
+        middle.innerHTML = "";
+    });
 
+    equal.addEventListener("click", function (){
+        if (middle.innerHTML === "/") {
+            leftSide.innerHTML = leftSide.innerHTML / rightSide.innerHTML;
 
+        } else if (middle.innerHTML === "*") {
+            leftSide.innerHTML = leftSide.innerHTML * rightSide.innerHTML;
 
+        } else if (middle.innerHTML === "+") {
+            leftSide.innerHTML = parseInt(leftSide.innerHTML) + parseInt(rightSide.innerHTML);
 
+        } else if (middle.innerHTML === "-") {
+            leftSide.innerHTML = leftSide.innerHTML - rightSide.innerHTML;
+
+        } else {
+            leftSide.innerHTML = "";
+        }
+
+        middle.innerHTML = "";
+        rightSide.innerHTML = "";
+    });
